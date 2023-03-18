@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title class="title">Productos<span class="logout" (click)="logOut()">Salir<ion-icon class="ico" name="log-out-outline"></ion-icon> </span></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="secondary">
+  <p class="device">Estas usando esta app desde un dispositivo {{platform}}, modelo {{model}}, versión {{version}} y el proveedor es {{manufacturer}}</p>
+  <ion-searchbar color="warning" placeholder="Buscar producto" (ionInput)="search($event)"></ion-searchbar>
+  <ion-card *ngFor="let product of products|filters:query" class="card-product">
+    <img alt="" src="/assets/images/{{product.image}}" />
+    <ion-card-header>
+      <ion-card-title>{{product.name}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p class="price"><span class="currency">{{product.currency}} </span>{{product.price}}</p>
+    </ion-card-content>
+    <p><ion-button  expand="full" type="submit" routerLink="/detalle-del-producto/{{product.id}}">Ver</ion-button> </p>
+
+  </ion-card>
+</ion-content>

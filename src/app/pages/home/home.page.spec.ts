@@ -21,4 +21,18 @@ describe('HomePage', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should get the average of the values', () => {
+    const total = 474;
+    const value = 12;
+    const result = component.avgGrades(total,value);
+    expect(result).toBeGreaterThanOrEqual(30);
+  });
+
+  it('should get the average of 2 numbrs positive and negative', () => {
+    const total = -1;
+    const value = 0;
+    const result =component.avgGrades(total,value);
+    expect(result).toEqual(5);
+  });
 });

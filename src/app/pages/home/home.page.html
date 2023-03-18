@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="tertiary">
+    <ion-title >
+      <span class="title">   IStore </span>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="full-card" color="secondary">
+
+  <div id="container" color="secondary">
+    <ion-card class="sections">
+      <ion-card-content>
+        <form  [formGroup]="dataForm" (ngSubmit)="login()">
+        <ion-list>
+          <ion-item>
+            <ion-label position="floating"  >Usuario</ion-label>
+            <ion-input type="text" formControlName="username" placeholder="usuario"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating" >Clave</ion-label>
+            <ion-input type="password" formControlName="password" placeholder="clave"></ion-input>
+          </ion-item>
+        </ion-list>
+        <div class="padding">
+        </div>
+        <ion-button color="success" type="submit" >Entrar</ion-button>
+      </form>
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+</ion-content>
+

@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title><span class="title"> Carrito de compras </span><span class="logout" (click)="logOut()">Salir<ion-icon class="ico" name="log-out-outline"></ion-icon> </span></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="secondary">
+
+ <div class="padding">
+
+ </div>
+  <ion-card class="card-product">
+    <p class="back" routerLink="/lista-de-productos"><span><ion-icon name="arrow-back-outline"></ion-icon>  </span> Volver a productos <ion-icon class="empty" name="trash-outline"> </ion-icon><span class="trash" (click)="eliminarPedido()"> Eliminar </span></p>
+    <div class="resumen" *ngIf="order">
+      <h3 class="subtitle"> <ion-icon class="resume" name="cart-outline"></ion-icon>Resumen de pedido</h3>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col class="label">
+            Nombre
+          </ion-col>
+          <ion-col class="label">
+             Precio
+          </ion-col>
+          <ion-col class="label">
+             Cantidad
+          </ion-col>
+        </ion-row>
+        <ion-row *ngFor="let item of order">
+          <ion-col class="element">
+            {{item.product}}
+          </ion-col>
+          <ion-col class="element">
+            {{item.price}}
+          </ion-col>
+          <ion-col class="element">
+            {{item.quantity}}
+          </ion-col>
+        </ion-row>
+        <ion-row></ion-row>
+        <ion-row class="bottom">
+          <ion-col class="bottom">
+
+          </ion-col>
+          <ion-col class="bottom">
+             <span class="pay"> Total a pagar Usd:</span>
+          </ion-col>
+          <ion-col class="label bottom">
+            {{total}}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+        <p><ion-button  expand="full" type="submit" (click)="pago()"><ion-icon class="car" name="card-outline"></ion-icon>Pagar</ion-button> </p>
+    </div>
+
+
+
+
+
+
+  </ion-card>
+
+
+
+
+
+
+</ion-content>

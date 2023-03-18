@@ -1,0 +1,63 @@
+.title{
+  margin: 0 auto !important;
+  font-weight: bold;
+  color:#7F0840;
+  font-size: 16px !important;
+}
+
+p.back{
+  font-size: 20px !important;
+  font-weight: bold;
+  color:#0A6082;
+}
+
+ion-icon{
+  margin-left: 5px !important;
+}
+
+img{
+  width: 100% !important;
+  height: 250px !important;
+ }
+
+ .price{
+   font-size: 22px;
+   font-weight: bold;
+  }
+
+ ion-card{
+   padding: 7px !important;
+   margin-top:30px !important;
+   margin-bottom: 30px !important;
+  }
+
+  .logout{
+    margin-left: 115px !important;
+    font-size: 15px !important;
+    color:#7F0840;
+    font-weight: bold;
+   }
+   ion-icon.ico{
+    font-size: 22px !important;
+    margin-left: 10px !important;
+    padding-top: 5px !important;
+    color:#7F0840;
+   }
+   ion-icon.car{
+    font-size: 22px !important;
+    margin-right: 25px !important;
+    padding-top: 5px !important;
+    color:#fff;
+   }
+  .quantity{
+    font-weight: bold;
+    font-size: 17px !important;
+  }
+
+  span.currency{
+    margin-right: 3px !important;
+  }
+  ion-card.card-product{
+    background-color: azure;
+   }
+

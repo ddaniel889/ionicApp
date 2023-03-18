@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title><span class="title"> Detalles del Producto </span><span class="logout" (click)="logOut()">Salir<ion-icon class="ico" name="log-out-outline"></ion-icon> </span></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="secondary">
+
+  <ion-card class="card-product">
+    <p class="back" routerLink="/lista-de-productos"><span><ion-icon name="arrow-back-outline"></ion-icon>  </span> Volver a productos</p>
+    <img alt="" src="/assets/images/{{productDetail[0]?.image}}" />
+    <ion-card-header>
+      <ion-card-title>{{productDetail[0]?.name}}</ion-card-title>
+      <ion-card-subtitle>{{productDetail[0]?.category}}</ion-card-subtitle>
+      <ion-card-subtitle>{{productDetail[0]?.description}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p class="price"><span class="currency"> {{productDetail[0]?.currency}} </span>{{productDetail[0]?.price}}</p>
+      <p>
+      <ion-label position="floating" class="quantity">Cantidad unidades</ion-label>
+      <ion-input [(ngModel)]="quantity" type="number" placeholder="0"></ion-input>
+    </p>
+    </ion-card-content>
+    <p><ion-button  expand="full" type="submit" (click)="openCart(productDetail[0])"><ion-icon class="car" name="cart-outline"></ion-icon>Agregar al carro</ion-button> </p>
+
+  </ion-card>
+
+</ion-content>
