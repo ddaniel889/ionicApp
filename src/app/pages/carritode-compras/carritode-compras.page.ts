@@ -21,11 +21,6 @@ export class CarritodeComprasPage implements OnInit {
   ngOnInit() {
     this.networkValidator();
     this.verProductos();
-   /* this.order = [{product:'balon',price:20,quantity:3},{product:'playstation',price:750,quantity:2},
-   {product:'jeans',price:14,quantity:5}];
-    for (let product in this.order) {
-        this.total = this.total + (this.order[product].price*this.order[product].quantity );
-    }*/
   }
 
 
