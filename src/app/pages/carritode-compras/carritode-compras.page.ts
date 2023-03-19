@@ -33,13 +33,11 @@ export class CarritodeComprasPage implements OnInit {
     this.nativeStorage.getItem('storeKey')
     .then(
       data => {
-        console.log('Productos GUARDADOS');
-        console.log(data);
-        const result = data.invoice;
-
-        this.order = result[0];
-        for (let product in result) {
-          this.total = this.total + (result[product].price*result[product].quantity );
+        this.order = data.invoice;
+        const product = this.order[0];
+        console.log(product);
+        for (let product in this.order) {
+          this.total = this.total + (this.order[product].price*this.order[product].quantity );
        }
 
       },
